@@ -17,11 +17,11 @@ var block = document.getElementById("block");
 var counter = 0;
 
 var checkDead = setInterval(function() {
-    let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+    let characterBottom = parseInt(window.getComputedStyle(character).getPropertyValue("bottom"));
     let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
-    if(blockLeft<120 && blockLeft>100 && characterTop>=130){
+    if(blockLeft<100 && blockLeft>80 && characterBottom<=20){
         block.style.animation = "none";
-        alert("Noo, try again dude");
+        alert("Click OK to restart");
         counter=0;
         block.style.animation = "block 3s infinite linear";
     }else{
