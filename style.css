@@ -3,6 +3,11 @@
 	margin: 0;
 }
 
+.game {
+	display: flex;
+	align-items: center;
+}
+
 #gameContainer {
 	display: flex;
 	justify-content: center;
@@ -15,11 +20,9 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 2rem;
 }
 
 .ctrlBtns {
-	font-size: 1.8rem !important;
 	cursor: pointer;
 	background-color: #284B63 !important;
 	color: #fff !important;
@@ -37,20 +40,12 @@
 
 #character {
 	position: relative;
-	width: 20px;
-	height: 50px;
-	top: 150px;
-	left: 100px;
 	background-color: #3C6E71;
 }
 
 #block {
 	border-radius: 50%;
 	position: relative;
-	width: 20px;
-	height: 20px;
-	left: 100%;
-	top: 130px;
 	background-color: #D9D9D9;
 	animation: block 3s infinite linear;
 }
@@ -66,3 +61,49 @@
 	0%{left: 100%;}
 	100%{left: 0px;}
 }
+
+/* phones */
+@media (min-width: 575.98px) { 
+	#character {
+		width: 60px;
+		height: 150px;
+		left: 100px;
+	}
+
+	#block {
+		width: 60px;
+		height: 60px;
+		top: 45px;
+	}
+
+	#scoreContainer {
+		font-size: 8rem;
+	}
+	
+	.ctrlBtns {
+		font-size: 6rem !important;
+	}
+}
+
+/* desktops */
+@media (min-width: 992px) { 
+	#character {
+		width: 20px;
+		height: 50px;
+		left: 100px;
+	}
+
+	#block {
+		width: 20px;
+		height: 20px;
+		top: 15px;
+	}
+
+	#scoreContainer {
+		font-size: 2rem;
+	}
+	
+	.ctrlBtns {
+		font-size: 1.8rem !important;
+	}
+ }

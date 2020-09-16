@@ -21,13 +21,12 @@ var checkDead = setInterval(function() {
     let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
     if(blockLeft<120 && blockLeft>100 && characterTop>=130){
         block.style.animation = "none";
-        alert("Noo, try again dude")
+        // alert("Noo, try again dude");
         counter=0;
         block.style.animation = "block 3s infinite linear";
     }else{
         counter++;
         document.getElementById("scoreSpan").innerHTML = Math.floor(counter/100);
-    	
     }
 }, 30);
 
